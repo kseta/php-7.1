@@ -10,6 +10,9 @@ RUN apt-get install -y --allow-unauthenticated php7.1 php7.1-cli php7.1-common p
 
 RUN apt-get install git nodejs npm composer -y --allow-unauthenticated
 
+RUN adduser foo
+RUN chown -R foo /home/foo
+
 RUN npm cache clean --force
 RUN npm install n -g
 RUN n 8.0.0
