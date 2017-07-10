@@ -16,5 +16,6 @@ RUN chown -R foo /home/foo
 RUN npm cache clean --force
 RUN npm install n -g
 RUN n 8.0.0
+RUN apt-get purge -y nodejs npm
 RUN npm install -g bower
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
