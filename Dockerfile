@@ -21,4 +21,6 @@ RUN apt-get purge -y nodejs npm
 RUN npm install -g bower
 
 RUN gem install bundler
+RUN gem install checkstyle_filter-git
 RUN gem install saddler
+RUN gem install saddler-reporter-github
